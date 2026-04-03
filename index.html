@@ -8,12 +8,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css">
-
+  
 </head>
 <body>
-
-<!-- ═══════════════════════════
-     NAVBAR
+  
+  <!-- ═══════════════════════════
+  NAVBAR
 ═══════════════════════════ -->
 <nav class="navbar navbar-expand-lg navbar-eutek">
   <div class="container">
@@ -41,7 +41,7 @@
 
 
 <!-- ═══════════════════════════
-     HERO
+HERO
 ═══════════════════════════ -->
 <section id="inicio">
   <div class="container">
@@ -72,7 +72,7 @@
             <div class="hv-dot hv-dot-g"></div>
             <span class="hv-title ms-2">Panel de operaciones</span>
           </div>
-
+          
           <div class="hv-metric">
             <span class="hv-metric-label">Tareas procesadas hoy</span>
             <span class="hv-metric-value blue">1.248</span>
@@ -85,7 +85,7 @@
             <span class="hv-metric-label">Tiempo promedio de proceso</span>
             <span class="hv-metric-value sage">4 min 12 s</span>
           </div>
-
+          
           <p class="hv-progress-label">Avance de validación automática</p>
           <div class="hv-progress">
             <div class="hv-progress-fill" style="width:82%"></div>
@@ -94,7 +94,7 @@
           <div class="hv-progress">
             <div class="hv-progress-fill sage-fill" style="width:18%"></div>
           </div>
-
+          
           <div class="hv-status">
             <div class="hv-status-dot"></div>
             <span class="hv-status-text">Sistema activo — última sincronización hace 2 min</span>
@@ -107,7 +107,7 @@
 
 
 <!-- ═══════════════════════════
-     TRUST STRIP
+TRUST STRIP
 ═══════════════════════════ -->
 <div class="trust-strip">
   <div class="container">
@@ -154,7 +154,7 @@
 
 
 <!-- ═══════════════════════════
-     VALUE PROP
+VALUE PROP
 ═══════════════════════════ -->
 <section class="value-section">
   <div class="container">
@@ -200,8 +200,119 @@
 </section>
 
 
+
+<section class="problems-section" id="como-ayudamos">
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <span class="section-label">Cómo ayudamos</span>
+      <h2 class="section-title">
+        Así mejoramos tu trabajo diario
+      </h2>
+      <p class="section-subtitle mx-auto">
+        Tomamos tareas que hoy haces manualmente y las volvemos más rápidas, ordenadas y confiables.
+      </p>
+    </div>
+    
+    <!-- Carousel -->
+    <div id="carouselAyuda" 
+         class="carousel carousel-fade"
+         data-bs-ride="carousel"
+         data-bs-interval="4500"
+         data-bs-pause="false">
+         
+         <!-- Indicadores -->
+         <div class="carousel-indicators">
+           <button type="button" data-bs-target="#carouselAyuda" data-bs-slide-to="0" class="active"></button>
+           <button type="button" data-bs-target="#carouselAyuda" data-bs-slide-to="1"></button>
+           <button type="button" data-bs-target="#carouselAyuda" data-bs-slide-to="2"></button>
+           <button type="button" data-bs-target="#carouselAyuda" data-bs-slide-to="3"></button>
+           <button type="button" data-bs-target="#carouselAyuda" data-bs-slide-to="4"></button>
+          </div>
+          
+          <!-- Slides -->
+          <div class="carousel-inner text-center">
+            
+            <div class="carousel-item active">
+              <div class="problem-card mx-auto">
+                <img src="assets/img/lamina1.png" class="img-fluid mb-4 rounded-3" alt="">
+                <h3 class="problem-title">Ordenamos tus archivos</h3>
+                <p class="problem-desc">
+                  Tomamos información desde Excel, PDF u otros documentos y la dejamos organizada en un solo lugar.
+            </p>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <div class="problem-card mx-auto">
+            <img src="assets/img/lamina2.png" class="img-fluid mb-4 rounded-3" alt="">
+            <h3 class="problem-title">Unificamos datos</h3>
+            <p class="problem-desc">
+              Juntamos información de distintos archivos y detectamos diferencias sin hacerlo manualmente.
+            </p>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <div class="problem-card mx-auto">
+            <img src="assets/img/lamina3.png" class="img-fluid mb-4 rounded-3" alt="">
+            <h3 class="problem-title">Detectamos errores</h3>
+            <p class="problem-desc">
+              Revisamos la información automáticamente y marcamos datos incorrectos o incompletos.
+            </p>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <div class="problem-card mx-auto">
+            <img src="assets/img/lamina4.png" class="img-fluid mb-4 rounded-3" alt="">
+            <h3 class="problem-title">Generamos reportes</h3>
+            <p class="problem-desc">
+              Creamos informes y resúmenes automáticamente, listos para usar en segundos.
+            </p>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <div class="problem-card mx-auto">
+            <img src="assets/img/lamina5.png" class="img-fluid mb-4 rounded-3" alt="">
+            <h3 class="problem-title">Mantienes el control</h3>
+            <p class="problem-desc">
+              Automatizamos lo repetitivo y dejamos claros los casos que necesitan revisión humana.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselAyuda" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselAyuda" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      
+    </div>
+    
+    <!-- Cierre -->
+    <div class="text-center mt-5">
+      <p class="section-subtitle mx-auto">
+        No se trata de cambiar todo, sino de mejorar lo que ya haces, haciéndolo más simple, rápido y ordenado.
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+
 <!-- ═══════════════════════════
-     PROBLEMS
+PROBLEMS
 ═══════════════════════════ -->
 <section class="problems-section">
   <div class="container">
@@ -247,7 +358,7 @@
 
 
 <!-- ═══════════════════════════
-     SERVICES
+SERVICES
 ═══════════════════════════ -->
 <section id="servicios">
   <div class="container">
@@ -305,7 +416,7 @@
 
 
 <!-- ═══════════════════════════
-     METHOD
+METHOD
 ═══════════════════════════ -->
 <section id="metodo">
   <div class="container">
@@ -366,7 +477,7 @@
 
 
 <!-- ═══════════════════════════
-     DIFFERENTIAL
+DIFFERENTIAL
 ═══════════════════════════ -->
 <section class="diff-section">
   <div class="container">
@@ -383,7 +494,7 @@
             <div class="col-lg-6">
               <div class="balance-visual">
                 <p style="font-size:.78rem;color:rgba(250,248,244,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;">Distribución del proceso</p>
-
+                
                 <div class="balance-item">
                   <span class="balance-label">Automatización total</span>
                   <div class="balance-bar-wrap">
@@ -393,7 +504,7 @@
                     <span class="balance-pct">55%</span>
                   </div>
                 </div>
-
+                
                 <div class="balance-item">
                   <span class="balance-label">Revisión asistida</span>
                   <div class="balance-bar-wrap">
@@ -403,7 +514,7 @@
                     <span class="balance-pct">30%</span>
                   </div>
                 </div>
-
+                
                 <div class="balance-item">
                   <span class="balance-label">Decisión humana</span>
                   <div class="balance-bar-wrap">
@@ -426,7 +537,7 @@
 
 
 <!-- ═══════════════════════════
-     INFOGRAPHIC
+INFOGRAPHIC
 ═══════════════════════════ -->
 <section class="infographic-section">
   <div class="container">
@@ -438,7 +549,7 @@
       </div>
     </div>
     <div class="row g-4">
-
+      
       <div class="col-sm-6 col-lg-3">
         <div class="info-card">
           <span class="info-card-badge badge-blue">Automatización asistida</span>
@@ -457,7 +568,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="col-sm-6 col-lg-3">
         <div class="info-card">
           <span class="info-card-badge badge-sage">Basada en archivos y reglas</span>
@@ -476,7 +587,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="col-sm-6 col-lg-3">
         <div class="info-card">
           <span class="info-card-badge badge-beige">Herramienta a medida</span>
@@ -495,7 +606,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="col-sm-6 col-lg-3">
         <div class="info-card">
           <span class="info-card-badge badge-carbon">Integración avanzada</span>
@@ -514,14 +625,14 @@
           </div>
         </div>
       </div>
-
+      
     </div>
   </div>
 </section>
 
 
 <!-- ═══════════════════════════
-     DEMO
+DEMO
 ═══════════════════════════ -->
 <section id="demo">
   <div class="container">
@@ -546,7 +657,7 @@
               <span class="demo-app-title">Validador de documentos operacionales</span>
               <span class="demo-app-badge">v1.2 — Demo</span>
             </div>
-
+            
             <div class="demo-upload">
               <div class="demo-upload-icon"><i class="bi bi-cloud-upload"></i></div>
               <p class="demo-upload-text">Arrastra tu archivo aquí o haz clic para subir<br><small style="opacity:.7">Acepta .xlsx, .csv, .pdf</small></p>
@@ -577,14 +688,14 @@
               <p class="demo-result-label"><i class="bi bi-magic"></i> Resultado automático</p>
               <p class="demo-result-text">Se encontraron 7 registros con campos obligatorios vacíos. Se marcaron para revisión manual. Los 141 registros válidos están listos para procesar. Tiempo de análisis: 2.3 segundos.</p>
             </div>
-
+            
             <button class="demo-run-btn">
               <i class="bi bi-play-fill"></i> Ejecutar validación
             </button>
           </div>
         </div>
       </div>
-
+      
       <div class="col-lg-5">
         <h4 class="mb-4" style="font-size:1.25rem;">Con esta demo puedes</h4>
         <div class="demo-bullet">
@@ -618,7 +729,7 @@
 
 
 <!-- ═══════════════════════════
-     FORM / CONTACTO
+FORM / CONTACTO
 ═══════════════════════════ -->
 <section id="contacto">
   <div class="container">
@@ -633,7 +744,7 @@
       <div class="col-lg-9">
         <div class="form-wrapper">
           <div class="row g-4">
-
+            
             <div class="col-md-6">
               <div class="form-group">
                 <label class="form-label-eutek" for="nombre">Nombre</label>
@@ -646,7 +757,7 @@
                 <input type="text" id="empresa" class="form-control-eutek" placeholder="Nombre de tu empresa" />
               </div>
             </div>
-
+            
             <div class="col-md-6">
               <div class="form-group">
                 <label class="form-label-eutek" for="email">Correo electrónico</label>
@@ -667,21 +778,21 @@
                 </select>
               </div>
             </div>
-
+            
             <div class="col-12">
               <div class="form-group">
                 <label class="form-label-eutek" for="herramientas">Herramientas o archivos que usas hoy</label>
                 <input type="text" id="herramientas" class="form-control-eutek" placeholder="Ej: Excel, correo electrónico, formularios Word, sistema interno..." />
               </div>
             </div>
-
+            
             <div class="col-12">
               <div class="form-group">
                 <label class="form-label-eutek" for="problema">Principal problema actual</label>
                 <textarea id="problema" class="form-control-eutek" placeholder="Describe brevemente dónde se pierde tiempo, qué errores ocurren o qué te gustaría mejorar..." style="min-height:100px;"></textarea>
               </div>
             </div>
-
+            
             <div class="col-md-6">
               <div class="form-group">
                 <label class="form-label-eutek" for="revision-humana">¿Hay partes que deben seguir siendo revisadas por una persona?</label>
@@ -707,14 +818,14 @@
                 </select>
               </div>
             </div>
-
+            
             <div class="col-12 text-center mt-2">
               <button type="submit" class="btn-primary-brand" style="padding:15px 44px;font-size:1rem;">
                 <i class="bi bi-send"></i> Enviar pre-diagnóstico
               </button>
               <p style="font-size:.78rem;color:var(--carbon-60);margin-top:14px;margin-bottom:0;">Te respondemos en menos de 24 horas hábiles con una orientación inicial sin costo.</p>
             </div>
-
+            
           </div>
         </div>
       </div>
@@ -747,12 +858,12 @@
 
 
 <!-- ═══════════════════════════
-     FOOTER
+FOOTER
 ═══════════════════════════ -->
 <footer>
   <div class="container">
     <div class="row g-5">
-
+      
       <div class="col-lg-4">
         <span class="footer-brand">EU<span>TEK</span></span>
         <p class="footer-tagline">Automatización y desarrollo web para operaciones reales. Ayudamos a empresas a ordenar, validar y mejorar sus procesos con tecnología útil y criterio humano.</p>
@@ -762,7 +873,7 @@
           <a href="#" class="social-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
         </div>
       </div>
-
+      
       <div class="col-6 col-lg-2">
         <p class="footer-heading">Navegación</p>
         <a href="#inicio" class="footer-link">Inicio</a>
@@ -771,7 +882,7 @@
         <a href="#demo" class="footer-link">Demo</a>
         <a href="#contacto" class="footer-link">Contacto</a>
       </div>
-
+      
       <div class="col-6 col-lg-2">
         <p class="footer-heading">Servicios</p>
         <a href="#servicios" class="footer-link">Diagnóstico</a>
@@ -779,12 +890,12 @@
         <a href="#servicios" class="footer-link">Herramientas</a>
         <a href="#servicios" class="footer-link">Mejora continua</a>
       </div>
-
+      
       <div class="col-lg-4">
         <p class="footer-heading">Contacto</p>
         <div class="footer-contact-item">
           <i class="bi bi-envelope"></i>
-          <span>hola@eutek.cl</span>
+          <span>info@eutek.cl</span>
         </div>
         <div class="footer-contact-item">
           <i class="bi bi-whatsapp"></i>
@@ -799,13 +910,13 @@
           <span>Lun–Vie, 9:00 – 18:00</span>
         </div>
       </div>
-
+      
     </div>
-
+    
     <hr class="footer-divider" />
-
+    
     <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-      <p class="footer-copy mb-0">© 2025 EUTEK. Todos los derechos reservados.</p>
+      <p class="footer-copy mb-0">© 2026 EUTEK. Todos los derechos reservados.</p>
       <p class="footer-copy mb-0">Diseñado y desarrollado con foco en claridad y utilidad.</p>
     </div>
   </div>
@@ -828,18 +939,18 @@
       }
     });
   }, { threshold: 0.12 });
-
+  
   animEls.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity .45s ease, transform .45s ease';
     obs.observe(el);
   });
-
+  
   // Navbar active link highlight
   const sections = document.querySelectorAll('section[id], #inicio');
   const navLinks = document.querySelectorAll('.nav-link-eutek');
-
+  
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(s => {
@@ -849,12 +960,13 @@
       l.style.color = l.getAttribute('href') === '#' + current
         ? 'rgba(250,248,244,1)'
         : '';
-      l.style.background = l.getAttribute('href') === '#' + current
+        l.style.background = l.getAttribute('href') === '#' + current
         ? 'rgba(255,255,255,.09)'
         : '';
-    });
+      });
   });
 </script>
 
 </body>
+<script src="assets/js/main.js"></script> 
 </html>
