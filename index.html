@@ -968,6 +968,47 @@ FOOTER
   });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form-contacto');
+    
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const textoOriginal = submitBtn.innerHTML;
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Enviando...';
+        
+        fetch('https://formsubmit.co/ajax/info@eutek.cl', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) return response.json();
+          throw new Error('Error en el envío');
+        })
+        .then(data => {
+          alert('¡Gracias! Tu pre-diagnóstico fue enviado. Te responderemos en menos de 24 horas hábiles.');
+          form.reset();
+        })
+        .catch(error => {
+          alert('Hubo un problema al enviar. Por favor intenta nuevamente o escríbenos a info@eutek.cl');
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = textoOriginal;
+        });
+      });
+    }
+  });
+</script>
 </body>
 <script src="assets/js/main.js"></script> 
 </html>
