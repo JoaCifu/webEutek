@@ -105,7 +105,7 @@ nav a:hover{color:var(--ink)}
  .tl{grid-template-columns:1fr;gap:20px}.tl::before{left:21px;right:auto;top:0;bottom:0;width:3px;height:auto}
  .tl li{text-align:left;padding-left:60px}.tl .dot{position:absolute;left:0;top:0;margin:0}}
 .flowbox{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:20px;overflow-x:auto}
-.flowbox .diagram{min-width:640px}
+.flowbox img{display:block;width:100%;height:auto;min-width:640px}
 .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.88rem;color:var(--muted);margin-top:12px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 /* demo */
@@ -233,26 +233,14 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted)}
 
   <h3 style="margin-top:56px">Qué se automatiza y qué decide una persona</h3>
   <p class="sub">Un ejemplo de validación de documentos: cada caso toma el camino que corresponde.</p>
+  <!-- Diagrama 2: flujo de automatización asistida -->
   <div class="flowbox">
-    <!-- Diagrama 2: flujo de automatización asistida -->
-    <svg class="diagram" viewBox="0 0 760 250" role="img" aria-label="Flujo: el archivo entra, se valida automáticamente; si está correcto pasa directo al reporte final, si no va a revisión humana y luego a decisión.">
-      <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1l8 4-8 4" fill="none" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round"/></marker></defs>
-      <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#ar)">
-        <path d="M112 80h38"/><path d="M270 80h38"/><path d="M420 80h200"/>
-        <path d="M364 106v66"/><path d="M420 190h38"/><path d="M578 190h30" /><path d="M668 160V108"/>
-      </g>
-      <rect x="10" y="55" width="102" height="50" rx="10" fill="var(--bg)" stroke="var(--line)" stroke-width="2"/><text x="61" y="85" text-anchor="middle" class="dtext">Archivo entra</text>
-      <rect x="150" y="50" width="120" height="60" rx="10" fill="var(--auto-soft)" stroke="var(--auto)" stroke-width="2"/><text x="210" y="78" text-anchor="middle" class="dtext">Validación</text><text x="210" y="95" text-anchor="middle" class="dsmall">automática</text>
-      <path d="M364 50l56 30-56 30-56-30z" fill="var(--bg)" stroke="var(--muted)" stroke-width="2"/><text x="364" y="84" text-anchor="middle" class="dtext">¿Correcto?</text>
-      <text x="520" y="70" text-anchor="middle" class="dsmall">Sí: sigue solo</text>
-      <text x="372" y="145" class="dsmall">No</text>
-      <rect x="308" y="172" width="112" height="36" rx="10" fill="var(--review-soft)" stroke="var(--review)" stroke-width="2"/><text x="364" y="195" text-anchor="middle" class="dtext">Se marca</text>
-      <rect x="458" y="168" width="120" height="44" rx="10" fill="var(--human-soft)" stroke="var(--human)" stroke-width="2"/><text x="518" y="188" text-anchor="middle" class="dtext">Revisión y</text><text x="518" y="203" text-anchor="middle" class="dtext">decisión humana</text>
-      <rect x="610" y="50" width="130" height="58" rx="10" fill="var(--auto-soft)" stroke="var(--auto)" stroke-width="2"/><text x="675" y="85" text-anchor="middle" class="dtext">Reporte final</text>
-      <rect x="610" y="168" width="130" height="44" rx="10" fill="none"/>
-    </svg>
-    <div class="legend"><span><i style="background:var(--auto)"></i>Automático</span><span><i style="background:var(--review)"></i>Queda marcado</span><span><i style="background:var(--human)"></i>Decide una persona</span></div>
+    <img src="img/diagrama.jpg"
+        alt="Flujo de validación: el archivo entra y se valida automáticamente. Si está correcto, pasa al reporte final; si no, queda marcado para revisión y decisión de una persona."
+        width="1618" height="587" loading="lazy">
+      
   </div>
+  
 </div></section>
 
 <!-- 5. DEMO ILUSTRATIVA -->
