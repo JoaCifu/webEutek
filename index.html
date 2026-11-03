@@ -235,13 +235,22 @@
   <h2>Conversemos sobre tu operación</h2>
   <p class="sub">Cuéntanos qué proceso te gustaría mejorar. Podemos comenzar con una conversación breve para entender el desafío y evaluar si EuTek puede ayudarte.</p>
   <p class="sub">La primera conversación es exploratoria y no implica compromiso de contratación. Si existe una oportunidad concreta, definiremos juntos el siguiente paso.</p>
-  <form onsubmit="return false">
-    <label>Nombre<input type="text" autocomplete="name" required></label>
-    <label>Correo electrónico<input type="email" autocomplete="email" required></label>
-    <label>Empresa<input type="text" autocomplete="organization"></label>
-    <label>¿Qué te gustaría mejorar?<textarea rows="3" required></textarea></label>
+  <form action="https://formsubmit.co/info@eutek.cl" method="POST">
+    <!-- Campos del formulario -->
+    <label>Nombre<input type="text" name="name" autocomplete="name" required></label>
+    <label>Correo electrónico<input type="email" name="email" autocomplete="email" required></label>
+    <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
+    <label>¿Qué te gustaría mejorar?<textarea name="mensaje" rows="3" required></textarea></label>
+    
+    <!-- Campos ocultos de configuración de FormSubmit -->
+    <input type="hidden" name="_subject" value="Nueva consulta desde EuTek.cl">
+    <input type="hidden" name="_captcha" value="false"> <!-- Opcional: desactiva el captcha de FormSubmit -->
+    <input type="text" name="_gotcha" style="display:none"> <!-- Honeypot anti-spam -->
+
     <button class="btn" type="submit">Enviar consulta</button>
   </form>
+  
+  
   <p class="note" style="color:#fff;opacity:.8">También puedes coordinar una conversación directamente con Joaquín.</p>
 </div></section>
 
