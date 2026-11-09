@@ -245,7 +245,9 @@
     <!-- Campos ocultos de configuración de FormSubmit -->
     <input type="hidden" name="_subject" value="Nueva consulta desde EuTek.cl">
     <input type="hidden" name="_captcha" value="false"> <!-- Opcional: desactiva el captcha de FormSubmit -->
-    <input type="text" name="_gotcha" style="display:none"> <!-- Honeypot anti-spam -->
+    <input type="text" name="_gotcha" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://eutek.cl/gracias.html">
 
     <button class="btn" type="submit">Enviar consulta</button>
   </form>
