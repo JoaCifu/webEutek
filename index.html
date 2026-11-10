@@ -235,22 +235,33 @@
   <h2>Conversemos sobre tu operación</h2>
   <p class="sub">Cuéntanos qué proceso te gustaría mejorar. Podemos comenzar con una conversación breve para entender el desafío y evaluar si EuTek puede ayudarte.</p>
   <p class="sub">La primera conversación es exploratoria y no implica compromiso de contratación. Si existe una oportunidad concreta, definiremos juntos el siguiente paso.</p>
-  <form action="https://formsubmit.co/info@eutek.cl" method="POST">
-    <!-- Campos del formulario -->
+  
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Clave de acceso de Web3Forms (Requerido) -->
+    <input type="hidden" name="access_key" value="f157095c-a6e3-41fd-b85d-30fafe979a3c">
+
+    <!-- Campos de tu formulario original -->
     <label>Nombre<input type="text" name="name" autocomplete="name" required></label>
     <label>Correo electrónico<input type="email" name="email" autocomplete="email" required></label>
     <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
     <label>¿Qué te gustaría mejorar?<textarea name="mensaje" rows="3" required></textarea></label>
+
+    <!-- Configuración opcional de Web3Forms -->
+    <!-- Asunto del correo que recibirás -->
+    <input type="hidden" name="subject" value="Nueva consulta desde EuTek.cl">
+    <!-- Nombre que aparecerá como remitente -->
+    <input type="hidden" name="from_name" value="Formulario EuTek">
     
-    <!-- Campos ocultos de configuración de FormSubmit -->
-    <input type="hidden" name="_subject" value="Nueva consulta desde EuTek.cl">
-    <input type="hidden" name="_captcha" value="false"> <!-- Opcional: desactiva el captcha de FormSubmit -->
-    <input type="text" name="_gotcha" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://eutek.cl/gracias.html">
+    <!-- Página a la que se redirige tras enviar. 
+        Nota: En el plan gratuito debe ser una URL de tu mismo dominio (eutek.cl) -->
+    <input type="hidden" name="redirect" value="https://eutek.cl/gracias.html">
+
+    <!-- Trampa anti-spam (Honeypot) -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
     <button class="btn" type="submit">Enviar consulta</button>
   </form>
+  
   
   
   <p class="note" style="color:#fff;opacity:.8">También puedes coordinar una conversación directamente con Joaquín.</p>
