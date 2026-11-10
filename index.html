@@ -236,35 +236,54 @@
   <p class="sub">Cuéntanos qué proceso te gustaría mejorar. Podemos comenzar con una conversación breve para entender el desafío y evaluar si EuTek puede ayudarte.</p>
   <p class="sub">La primera conversación es exploratoria y no implica compromiso de contratación. Si existe una oportunidad concreta, definiremos juntos el siguiente paso.</p>
   
-  <form action="https://api.web3forms.com/submit" method="POST">
-    <!-- Clave de acceso de Web3Forms (Requerido) -->
+ 
+  <form id="form-contacto" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Clave de acceso de Web3Forms -->
     <input type="hidden" name="access_key" value="f157095c-a6e3-41fd-b85d-30fafe979a3c">
 
-    <!-- Campos de tu formulario original -->
-    <label>Nombre<input type="text" name="name" autocomplete="name" required></label>
+    <!-- Campos del formulario -->
+    <label>Nombre<input type="text" name="name" id="campo-nombre" autocomplete="name" required></label>
     <label>Correo electrónico<input type="email" name="email" autocomplete="email" required></label>
-    <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
-    <label>¿Qué te gustaría mejorar?<textarea name="mensaje" rows="3" required></textarea></label>
+    <label>Empresa<input type="text" name="empresa" id="campo-empresa" autocomplete="organization"></label>
+    <label>¿Qué te gustaría mejorar?<textarea name="mensaje" id="campo-mensaje" rows="3" required>Quisiera saber más sobre cómo pueden ayudarme. ¿Podemos agendar una conversación breve?.</textarea></label>
 
-    <!-- Configuración opcional de Web3Forms -->
-    <!-- Asunto del correo que recibirás -->
+
+
+    <!-- Configuración de Web3Forms -->
     <input type="hidden" name="subject" value="Nueva consulta desde EuTek.cl">
-    <!-- Nombre que aparecerá como remitente -->
     <input type="hidden" name="from_name" value="Formulario EuTek">
-    
-    <!-- Página a la que se redirige tras enviar. 
-        Nota: En el plan gratuito debe ser una URL de tu mismo dominio (eutek.cl) -->
-    <input type="hidden" name="redirect" value="https://eutek.cl/gracias.html">
-
-    <!-- Trampa anti-spam (Honeypot) -->
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
+    <!-- Botón de envío por correo -->
     <button class="btn" type="submit">Enviar consulta</button>
   </form>
+
+  <!-- Botón de WhatsApp (fuera del form para que no dispare el envío) -->
+  <button type="button" id="btn-whatsapp" class="btn" style="background:#25D366; color:white; margin-top:10px;">
+    WhatsApp
+  </button>
+
+  <script>
+    document.getElementById('btn-whatsapp').addEventListener('click', function () {
+      // 1. Capturar los valores del formulario
+      const nombre   = document.getElementById('campo-nombre').value.trim()   || 'Sin nombre';
+      const empresa  = document.getElementById('campo-empresa').value.trim()  || 'Sin empresa';
+      const mensaje  = document.getElementById('campo-mensaje').value.trim()  || 'Sin mensaje';
+
+      // 2. Construir el texto del mensaje
+      const texto = `Hola EuTek, soy ${nombre} de ${empresa}. ${mensaje}`;
+
+      // 3. Armar la URL de WhatsApp 
+      const numero = '56991564261';
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+      // 4. Abrir WhatsApp en una nueva pestaña/ventana
+      window.open(url, '_blank');
+    });
+  </script>
   
   
   
-  <p class="note" style="color:#fff;opacity:.8">También puedes coordinar una conversación directamente con Joaquín.</p>
 </div></section>
 
 <footer><div class="wrap">© 2026 EuTek · Ingeniería de procesos y soluciones digitales · Santiago, Chile</div></footer>
