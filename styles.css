@@ -231,3 +231,42 @@ input,textarea{
 
 /* --- Footer ------------------------------------------------------------- */
 footer{padding:22px 0;font-size:.88rem;color:var(--muted)}
+/* --- Casos EuTek | Componentes compartidos ------------------------------- */
+.eyebrow{font-size:.77rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--auto);margin-bottom:12px}
+.casos-section{background:var(--surface);border-block:1px solid var(--line)}
+.case-feature{display:grid;grid-template-columns:1.06fr 1fr;gap:28px;align-items:center;margin-top:28px;background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.case-feature__copy{padding:30px}
+.case-feature__copy h3{font-size:clamp(1.35rem,2.6vw,1.85rem)}
+.case-feature__copy p:not(.eyebrow){color:var(--muted)}
+.case-feature__image{display:block;height:100%;min-height:320px;background:var(--auto-soft);overflow:hidden}
+.case-feature__image img{width:100%;height:100%;object-fit:cover;object-position:75% center;display:block;transition:transform .25s ease}
+.case-feature__image:hover img{transform:scale(1.025)}
+.case-metric-inline{display:flex;gap:20px;align-items:center;margin:20px 0 24px}
+.case-metric-inline span:not(.case-metric-arrow){display:flex;flex-direction:column;gap:0}
+.case-metric-inline b{font:700 clamp(1.5rem,3vw,2rem)/1.15 var(--head);color:var(--ink)}
+.case-metric-inline small{font-size:.8rem;color:var(--muted)}
+.case-metric-arrow{font-size:1.35rem;color:var(--auto)}
+.case-top{padding-top:44px;padding-bottom:48px}
+.case-back{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--auto);text-decoration:none;font-weight:600;margin-bottom:28px}
+.case-lead{font-size:1.14rem;color:var(--muted);max-width:66ch}
+.case-kpis{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0}
+.case-kpi{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:22px}
+.case-kpi strong{display:block;font:700 clamp(2rem,5vw,3.2rem)/1.1 var(--head);margin:6px 0;color:var(--ink)}
+.case-kpi--after{border-color:var(--auto);background:var(--auto-soft)}
+.case-kpi--after strong{color:var(--auto)}
+.case-content{max-width:860px;margin:auto}
+.case-content h2{margin-top:14px}
+.case-content ul{padding-left:1.4em;margin:10px 0 18px}
+.case-content li{margin-bottom:9px}
+.case-figure{margin:26px 0 40px}
+.case-figure img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
+.case-figure figcaption{color:var(--muted);font-size:.84rem;margin-top:10px}
+.case-callout{border-left:4px solid var(--auto);background:var(--auto-soft);padding:20px 22px;margin:26px 0;border-radius:0 10px 10px 0}
+.case-callout p:last-child{margin-bottom:0}
+.case-quote{font:700 clamp(1.4rem,3.3vw,2rem)/1.28 var(--head);max-width:28ch;margin:25px 0}
+.case-cta{background:var(--brand);color:var(--on-brand);padding:52px 0}
+.case-cta h2{color:var(--on-brand)}
+.case-cta p{max-width:65ch;opacity:.93}
+.case-cta .btn{background:var(--surface);color:#002FA7;border-color:var(--surface)}
+.case-note{font-size:.82rem;color:var(--muted);margin:12px 0}
+@media(max-width:820px){.case-feature{grid-template-columns:1fr}.case-feature__image{min-height:0;aspect-ratio:16/9}.case-feature__copy{padding:22px}.case-kpis{gap:10px}.case-kpi{padding:14px}}
